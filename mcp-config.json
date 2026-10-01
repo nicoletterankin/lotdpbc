@@ -1,7 +1,10 @@
 {
   "mcpServers": {
     "word-orb": {
-      "url": "https://mcp.wordorb.ai/mcp"
+      "url": "https://wordorb.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer wo_YOUR_KEY"
+      }
     }
   }
 }

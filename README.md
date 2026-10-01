@@ -1,51 +1,33 @@
-# Word Orb MCP Server
+# Word Orb MCP server
 
-The language layer for AI agents. One call returns IPA, definitions, etymology, translations in 47 languages, gender equity guidance, and AI identity ethics — in 3ms from the edge.
+This repository holds an early configuration for the Word Orb MCP server. The current code, setup instructions and plans live in **[nicoletterankin/word-orb](https://github.com/nicoletterankin/word-orb)**. Please use that repository.
 
-50,000+ words. 47 languages. 60 teaching tones. Ethics built in. $0.00 cached.
+Word Orb is a dictionary and lesson API for developers: 162,253 AI-assisted English word records and 601,143 translations. Coverage varies by word and language, so check your own word list with the [evaluator](https://wordorb.ai/playground#evaluate) before you integrate.
 
-## Quick Setup
+## Connect
 
-Add to your MCP client config:
+The MCP endpoint is `https://wordorb.ai/mcp` (Streamable HTTP). Tools that look up words need a Word Orb API key, sent as a header:
+
 ```json
 {
   "mcpServers": {
     "word-orb": {
-      "url": "https://mcp.wordorb.ai/mcp"
+      "url": "https://wordorb.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer wo_YOUR_KEY"
+      }
     }
   }
 }
 ```
 
-## Tools
+`wo_YOUR_KEY` is a placeholder. Keep your real key in your client's secret storage, never in a committed file.
 
-### word_enrich
-Look up any word. Returns IPA, part of speech, definition, etymology, teaching insight, semantic connections, translations in 47 languages with native script, and ethics guidance.
+## Plans and docs
 
-**Example:** `word_enrich({ word: "courage" })`
-
-### word_ethics
-Get gender equity context and AI identity guidance for any word. Includes historical gender bias, inclusive usage suggestions, and honest framing guidance for AI agents.
-
-### agent_speak
-Get recommended phrasing for AI agents based on intent and audience size. Helps agents communicate honestly about their nature.
-
-## Pricing
-
-| Tier | Price | Daily Calls | Features |
-|------|-------|-------------|----------|
-| Free | $0 | 50 | Core word data |
-| Starter | $49/mo | 5,000 | + translations |
-| Growth | $149/mo | 50,000 | + ethics + voices |
-| Enterprise | $499/mo | Unlimited | Everything + SLA |
-
-## Links
-
-- 🌐 [wordorb.ai](https://wordorb.ai)
-- 📡 [API](https://api.wordorb.ai)
-- 📖 [Docs](https://docs.wordorb.ai)
-- 🔌 MCP Endpoint: `https://mcp.wordorb.ai/mcp`
+- Plans and limits: [wordorb.ai/pricing](https://wordorb.ai/pricing)
+- API docs: [wordorb.ai/docs](https://wordorb.ai/docs)
 
 ## About
 
-Built by [Lesson of the Day PBC](https://lotdpbc.com). Word Orb is the language infrastructure behind Kelly and Ken, AI teachers serving learners ages 2-102 in 47 languages.
+Word Orb is made by [Lesson of the Day, PBC](https://lotdpbc.com), a California Public Benefit Corporation based in Malibu, California.

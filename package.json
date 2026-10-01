@@ -1,7 +1,7 @@
 {
   "name": "word-orb-mcp",
   "version": "1.0.0",
-  "description": "Word Orb MCP Server — the language layer for AI agents",
+  "description": "Word Orb MCP server configuration (see nicoletterankin/word-orb)",
   "keywords": [
     "mcp",
     "language",
@@ -9,14 +9,13 @@
     "translations",
     "etymology",
     "ipa",
-    "ethics",
     "word-orb"
   ],
   "homepage": "https://wordorb.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lotdpbc/word-orb-mcp.git"
+    "url": "https://github.com/nicoletterankin/word-orb.git"
   },
   "license": "MIT",
-  "author": "Lesson of the Day PBC <hello@lotdpbc.com> (https://lotdpbc.com)"
+  "author": "Lesson of the Day, PBC (https://lotdpbc.com)"
 }
